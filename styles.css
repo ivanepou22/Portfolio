@@ -415,10 +415,15 @@ body {
 #main__img:hover {
     transform: scale(1.05);
     transition: 0.3s ease-in;
+    -webkit-filter: grayscale(30%);
+    filter: grayscale(30%);
     opacity: 1;
 }
 /* Mobile Responsive */
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1024px) {
+    .main-container {
+        height: 500px;
+    }
     #main__img {
         opacity: 0.9;
         width: 100%;
@@ -486,23 +491,6 @@ body {
     }
 }
 
-@media screen and (max-width: 300px) {
-    .main-container {
-        display: flex;
-        flex-direction: column;
-        margin-top: 3rem;
-        align-items: center;
-        justify-self: center;
-        height: 1000px;
-    }
-
-    .main-content {
-        display: flex;
-        flex-direction: column;
-        justify-items: flex-start;
-    }
-}
-
 @media screen and (max-width: 480px) {
     .main-content h1 {
         font-size: 2rem;
@@ -524,6 +512,23 @@ body {
 
     .main-content .social-media-icons {
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        align-items: center;
+        justify-self: center;
+        height: 1000px;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-start;
     }
 }
 
@@ -656,6 +661,16 @@ body {
     opacity: 1;
 }
 
+@media screen and (max-width: 1024px) {
+    .about-container {
+        display: grid;
+        /* flex-direction: column; */
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-self: center;
+        height: 65vh;
+    }
+}
 @media screen and (max-width: 768px) {
     .about-container {
         display: flex;
@@ -738,6 +753,11 @@ body {
        padding-left: 1px;
    }
    }
+@media screen and (max-width: 520px) {
+    .about-container {
+        height: 1000px;
+    }
+}
 
 @media screen and (max-width: 365px) {
  .about-container {
@@ -746,7 +766,7 @@ body {
      margin-top: 3rem;
      align-items: center;
      justify-self: center;
-     height: 1100px;
+     height: 1200px;
  }
 #about--img2 {
     width: 100%;
@@ -792,35 +812,267 @@ body {
         height: 1350px;
         align-items: center;
         justify-self: center;
+
     }
     .about-content ul {
         display: grid;
         grid-template-columns: 1fr;
     }
 }
-/* Services */
-.services {
-    /* background: rgb(216, 213, 213); */
+
+/* Tabs List */
+.work-section{
+    padding: 0 0;
+}
+.work-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.work-content{
+    color: rgb(173, 155, 155);
+    width: 100%;
+}
+
+.work-content h1{
+    background: #fe3b6f;
+    background-image: linear-gradient(to top, #ff087b7e 0%, #3309cc 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+#tabsDiv {
+    height: 80vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.tablist {
+    display: flex;
+    align-items: center;
+}
+
+#tabsDiv ul {
+    height: 300px;
+    padding: 0px 5px;
+}
+
+#tabsDiv .ulClass li {
+    width: 100%;
+    height: 60px;
+}
+
+/* Button to open the content */
+#tabsDiv button {
+    display: flex;
+    flex: 1;
+    background-color: #0a192f;
+    padding: 15px 10px;
+    width: 100%;
+    color: #fff;
+    border-left: teal 1px solid;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Button styling on mouse hover */
+#tabsDiv button:hover {
+    background-color: #0e3164;
+    color: rgb(90, 146, 90);
+}
+
+#tabsDiv button.active {
+    border-left: 2px rgb(90, 146, 90) solid;
+}
+
+/* Content for tabs*/
+.contentClass {
+    display: none;
+    position: absolute;
+    left: 20%;
+    padding: 0px 15px;
+    width: 70%;
+    border-style: none;
+    height: 300px;
+}
+
+.contentClass .work-title {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px 20px 20px 0px;
+    color: rgb(7, 122, 111);
+}
+
+.contentClass h6 {
+    font-weight: normal;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.work-tasks li{
+    padding: 0px 0px 10px 5px;
+}
+
+.work-tasks li::marker{
+    content: '>';
+    color: rgb(22, 199, 181);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px;
+}
+@media screen and (min-width: 2000px) {
+    .work-container {
+        background-color: green;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #tabsDiv {
+        height: 30vh;
+    }
+
+    .contentClass {
+        left: 35%;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .work-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        height: 50%;
+        width: 100%;
+    }
+
+    #tabsDiv {
+        height: 30vh;
+    }
+
+    .contentClass {
+        left: 35%;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .work-container {
+        height: 55%;
+        width: 100%;
+        margin-top: 0px;
+        align-items: flex-start;
+    }
+    #tabsDiv {
+        height: 80vh;
+        width: 100%;
+    }
+
+    .contentClass {
+        left: 40%;
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .work-container {
+        height: 120vh;
+        width: 100%;
+    }
+    .contentClass {
+        left: 50%;
+        width: 50%;
+    }
+
+    .work-content h1{
+        font-weight: normal;
+        font-size: 25px;
+        background: white;
+        background-image: linear-gradient(to top, #fff 0%, #fff 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        text-transform: capitalize;
+    }
+    .work-section{
+        padding: 1rem 0 3rem 0;
+    }
+    #tabsDiv button {
+        padding: 5px 5px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .work-container {
+        height: 160vh;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .work-container {
+        height: 170vh;
+    }
+    .work-section{
+        padding: 0 0 1rem 0;
+    }
+
+    .work-content h1{
+        font-weight: normal;
+        font-size: 15px;
+        background: white;
+        background-image: linear-gradient(to top, #fff 0%, #fff 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        text-transform: capitalize;
+    }
+
+    #tabsDiv button {
+        padding: 2px 2px;
+        font-weight: normal;
+        text-align: left;
+        margin-left: -20px;
+    }
+
+}
+/* End Tab List */
+
+/* projects */
+.projects {
+    display: flex;
+     flex-direction: column;
     align-items: center;
     height: 100%;
 }
 
-.services h1 {
-    background-color: #ff8177;
-    background-image: linear-gradient(
-        to right,
-        #ff8177 0%,
-        #ff867a 0%,
-        #ff8c7f 21%,
-        #f99185 52%,
-        #cf556c 78%,
-        #b12a5b 100%
-    );
+.projects h1 {
+    background-color: #c08c88;
+    background-image: linear-gradient(to top, #ff087b7e 0%, #3309cc 100%);
     background-size: 100%;
-    margin-bottom: 5rem;
-    margin-top: 1rem;
+    margin-bottom: 2rem;
     font-size: 2.5rem;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -829,92 +1081,199 @@ body {
 
 }
 
-.services-container {
+.projects-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.services-card {
+.projects-card {
+    margin: 1rem;
     margin: 1rem;
     height: 500px;
     width: 300px;
-    border-radius: 4px;
-    background-image: linear-gradient(
-        to bottom, rgba(0,0,0,0) 0%,
-         rgba(17,17,17,0.6) 100%
-    ),
-    url('/images/pic3.jpg');
-
-    background-size: cover;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
     position: relative;
     color: #fff;
+    background-color: rgba(3, 51, 83, 0.781);
+    opacity: 0.5;
 }
 
-.services-card:nth-child(2) {
-    background-image: linear-gradient(
-        to bottom, rgba(0, 0, 0, 0) 0%,
-         rgba(17, 17, 17, 0.6) 100%
-    ),
-    url('/images/pic4.jpg');
-}
-
-.services h2 {
+.projects h2 {
     position: absolute;
-    top: 350px;
+    top: 50px;
     left: 30px;
 }
 
-.services-card p {
+.projects-card p {
+    background-color: rgba(4, 53, 99, 0.781);
+    padding: 20px;
     position: absolute;
-    top: 400px;
-    left: 30px;
+    top: 100px;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 
-.services-card button {
+.projects-card button {
     color: #fff;
     padding: 10px 20px;
-    border: none;
+    border: 2px solid rgb(120, 231, 168);
     outline: none;
     border-radius: 4px;
-    background: #f77062;
+    background: #0a192f;
     position: absolute;
     top: 440px;
-    left: 30px;
     font-size: 1rem;
     cursor: pointer;
 }
 
-.services-card:hover {
+.projects-card:hover {
     transform: scale(1.075);
     transition: 0.2s ease-in;
     cursor: pointer;
 }
 
 @media screen and (max-width: 960px) {
-    .services {
+    .projects {
         height: 1600px;
     }
 
-    .services h1 {
+    .projects h1 {
         font-size: 2rem;
         margin-top: 5rem;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .services {
-        height: 1400px;
+    .projects {
+        height: 1700px;
     }
 
-    .services h1 {
+    .projects h1 {
         font-size: 1.2rem;
     }
 
-    .services-card {
+    .projects-card {
         width: 300px;
     }
 }
+
+/* min Projects */
+
+.mini-project{
+    background: #0a192f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 3rem 0;
+}
+
+.mini-project h1 {
+    background: #ff8177;
+    background-image: linear-gradient(to top, #ff087b7e 0%, #3309cc 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.mini-project-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.mini-project-card {
+    margin: 10px;
+    height: 350px;
+    width: 290px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image: linear-gradient(to right, #044546 0%, #05184b 100%);
+    transition: 0.3s ease-in;
+}
+
+.mini-project-card:nth-child(2) {
+  background: #1FA2FF;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #023e61, #01333b, #044d81);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #02324e, #127283, #044d81);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.mini-project-card:nth-child(3) {
+    background-image: linear-gradient(
+        -225deg,
+        #06165f 0%,
+        #066066 29%,
+        #23086d 67%,
+        #063d28 100%
+    );
+}
+
+.mini-project-card h2 {
+    text-align: center;
+}
+
+.mini-project-card p {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 15px;
+}
+
+.mini-project-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.mini-project-card button {
+    color: #fff;
+    padding: 10px 24px;
+    outline: none;
+    border-radius: 4px;
+    background: #0a192f;
+    font-size: 1rem;
+    border: 2px solid rgb(120, 231, 168);
+}
+
+.mini-project-card button:hover{
+    cursor: pointer;
+}
+
+.mini-project-card:hover {
+    transform: scale(1.075);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+    .mini-project-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mini-project-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* footer css */
 
