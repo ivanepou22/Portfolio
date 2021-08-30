@@ -674,7 +674,7 @@ body {
 @media screen and (max-width: 768px) {
     .about-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         justify-self: center;
         height: 90vh;
@@ -713,7 +713,7 @@ body {
 @media screen and (max-width: 650px) {
     .about-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         justify-self: center;
         height: 1000px;
@@ -762,7 +762,7 @@ body {
 @media screen and (max-width: 365px) {
  .about-container {
      display: flex;
-     flex-direction: column;
+     flex-direction: column-reverse;
      margin-top: 3rem;
      align-items: center;
      justify-self: center;
@@ -807,7 +807,7 @@ body {
 @media screen and (max-width: 300px) {
     .about-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-top: 3rem;
         height: 1350px;
         align-items: center;
