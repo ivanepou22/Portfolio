@@ -538,13 +538,14 @@ body {
 }
 
 .about-content h1{
-    background: #fe3b6f;
+    /* background: #fe3b6f;
     background-image: linear-gradient(to top, #ff087b7e 0%, #3309cc 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; */
+    color: #fff;
     text-transform: capitalize;
     margin-bottom: 10px;
 }
@@ -824,13 +825,14 @@ body {
 }
 
 .work-content h1{
-    background: #fe3b6f;
+    /* background: #fe3b6f;
     background-image: linear-gradient(to top, #ff087b7e 0%, #3309cc 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; */
+    color: #fff;
     text-transform: capitalize;
     margin-bottom: 10px;
 }
@@ -982,13 +984,14 @@ body {
     .work-content h1{
         font-weight: normal;
         font-size: 25px;
-        background: white;
+        color: #fff;
+        /* background: white;
         background-image: linear-gradient(to top, #fff 0%, #fff 100%);
         background-size: 100%;
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
+        -moz-text-fill-color: transparent; */
         text-transform: capitalize;
     }
     .work-section{
@@ -1017,13 +1020,14 @@ body {
     .work-content h1{
         font-weight: normal;
         font-size: 15px;
-        background: white;
+        color: #fff;
+        /* background: white;
         background-image: linear-gradient(to top, #fff 0%, #fff 100%);
         background-size: 100%;
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
+        -moz-text-fill-color: transparent; */
         text-transform: capitalize;
     }
 
@@ -1046,15 +1050,16 @@ body {
 }
 
 .projects h1 {
-    background-color: #c08c88;
+    /* background-color: #c08c88;
     background-image: linear-gradient(to top, #ff087b7e 0%, #3309cc 100%);
-    background-size: 100%;
+    background-size: 100%; */
+    color: #fff;
     margin-bottom: 2rem;
     font-size: 2.5rem;
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; */
 
 }
 
@@ -1163,13 +1168,14 @@ body {
 }
 
 .mini-project h1 {
-    background: #ff8177;
+    /* background: #ff8177;
     background-image: linear-gradient(to top, #ff087b7e 0%, #3309cc 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; */
+    color: #fff;
     margin-bottom: 3rem;
     font-size: 2.5rem;
 }
@@ -1304,13 +1310,14 @@ body {
     width: 50%;
 }
 .contact-container h1 {
-    background: #ff8177;
+    /* background: #ff8177;
     background-image: linear-gradient(to top, #ff087b7e 0%, #3309cc 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; */
+    color: #fff;
     margin-bottom: 2rem;
     font-size: 2.5rem;
 }
