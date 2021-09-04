@@ -6,6 +6,14 @@ menu.addEventListener('click', () => {
     menuinks.classList.toggle('active');
 })
 
+// spinner
+let spinnerWrapper = document.querySelector('.spinner-wrapper');
+
+window.addEventListener('load', function () {
+    // spinnerWrapper.style.display = 'none';
+    spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+});
+
 window.onunload = (e) => {
     window.localStorage.setItem('theme', 'dark');
 }
