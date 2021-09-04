@@ -1352,10 +1352,6 @@ body {
     margin-bottom: 16px;
 }
 
-.footer-link-items > h2 {
-    /* color: #fff; */
-}
-
 .footer-link-items a {
     /* color: #fff; */
     text-decoration: none;
@@ -1407,9 +1403,6 @@ body {
     margin-bottom: 16px;
 }
 
-.website-rights {
-    /* color: #fff; */
-}
 
 @media screen and (max-width: 820px) {
     .footer-links {
